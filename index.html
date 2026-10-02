@@ -1,0 +1,502 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>NAMASTE — авторская кухня и вечерний fine dining</title>
+<meta name="description" content="NAMASTE — ресторан фьюжн-кухни в центре города. Вечерний сет-меню, винодельческая карта, авторские блюда от шефа. Бронирование стола онлайн.">
+<meta name="theme-color" content="#0a0a0a">
+<meta property="og:title" content="NAMASTE — авторская кухня и вечерний fine dining">
+<meta property="og:description" content="Фьюжн, в котором восток встречается с европейской техникой. Сет-меню из девяти подач.">
+<meta property="og:type" content="website">
+<script>document.documentElement.classList.add('js');</script>
+<noscript><style>body{overflow:auto!important}.preloader{display:none!important}</style></noscript>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400;1,500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body class="is-loading">
+
+<div class="preloader" id="preloader" aria-hidden="true">
+  <div class="preloader__inner">
+    <div class="preloader__brand">
+      <span>N</span><span>A</span><span>M</span><span>A</span><span>S</span><span>T</span><span>E</span>
+    </div>
+    <div class="preloader__bar"><i id="preloaderFill"></i></div>
+    <div class="preloader__meta">
+      <span>Авторская кухня · Fine dining</span>
+      <span id="preloaderCount">0</span>
+    </div>
+  </div>
+</div>
+
+<div class="grain" aria-hidden="true"></div>
+<div class="vignette" aria-hidden="true"></div>
+
+<div class="cursor" aria-hidden="true">
+  <div class="cursor__dot" id="cursorDot"></div>
+  <div class="cursor__ring" id="cursorRing">
+    <span class="cursor__label" id="cursorLabel">VIEW</span>
+  </div>
+</div>
+
+<header class="header" id="header">
+  <a href="#hero" class="header__logo" data-scroll aria-label="NAMASTE — на главную">
+    NAMASTE
+  </a>
+
+  <nav class="header__nav" aria-label="Основная навигация">
+    <a href="#manifesto" data-scroll>Манифест</a>
+    <a href="#menu" data-scroll>Меню</a>
+    <a href="#gallery" data-scroll>Атмосфера</a>
+    <a href="#reviews" data-scroll>Отзывы</a>
+  </nav>
+
+  <a href="#reserve" class="btn btn--sm btn--gold" data-scroll>Забронировать</a>
+
+  <button class="burger" id="burger" aria-label="Открыть меню" aria-expanded="false">
+    <span></span><span></span>
+  </button>
+</header>
+
+<div class="mobile-menu" id="mobileMenu" aria-hidden="true">
+  <nav class="mobile-menu__nav">
+    <a href="#manifesto" data-scroll><i>01</i>Манифест</a>
+    <a href="#menu" data-scroll><i>02</i>Меню</a>
+    <a href="#gallery" data-scroll><i>03</i>Атмосфера</a>
+    <a href="#reviews" data-scroll><i>04</i>Отзывы</a>
+    <a href="#reserve" data-scroll><i>05</i>Бронирование</a>
+  </nav>
+  <div class="mobile-menu__foot">
+    <a href="tel:+79999999999">+7 999 999 99 99</a>
+    <a href="#" class="link-underline">Москва, Патриаршие Пруды, 12</a>
+  </div>
+</div>
+
+<main>
+
+<section class="hero" id="hero">
+  <div class="hero__bg" data-parallax data-speed="-0.18">
+    <img src="https://images.unsplash.com/photo-1414235077428-338989a2e8c0?auto=format&fit=crop&w=2000&q=80"
+         alt="Тёмный зал ресторана с тёплым светом" fetchpriority="high" decoding="async">
+  </div>
+  <div class="hero__overlay"></div>
+  <div class="hero__glow"></div>
+
+  <div class="hero__content">
+    <div class="hero__overline" data-hero-item>
+      <span class="dot"></span>
+      <span>Ресторан авторской кухни</span>
+      <span class="hero__overline-sep"></span>
+      <span>Москва</span>
+    </div>
+
+    <h1 class="hero__title" data-split="chars" aria-label="NAMASTE">NAMASTE</h1>
+
+    <p class="hero__sub" data-hero-item>
+      Фьюжн, в котором восток встречается с европейской техникой.
+      Вечерний сет из девяти подач, винодельческая карта и свет,
+      который никогда не выключается.
+    </p>
+
+    <div class="hero__actions" data-hero-item>
+      <a href="#reserve" class="btn btn--gold btn--lg" data-scroll data-cursor="reserve">
+        <span>Забронировать стол</span>
+      </a>
+      <a href="#menu" class="btn btn--ghost btn--lg" data-scroll data-cursor="menu">
+        <span>Смотреть меню</span>
+      </a>
+    </div>
+  </div>
+
+  <a href="#manifesto" class="scroll-hint" data-scroll data-cursor="down" aria-label="Прокрутить вниз">
+    <span class="scroll-hint__text">SCROLL</span>
+    <span class="scroll-hint__line"><i></i></span>
+  </a>
+
+  <div class="hero__corner hero__corner--tl">EST. 2016</div>
+  <div class="hero__corner hero__corner--br">55°45′N · 37°36′E</div>
+</section>
+
+<section class="manifesto" id="manifesto">
+  <div class="manifesto__grid">
+
+    <div class="manifesto__text">
+      <span class="eyebrow" data-reveal>Манифест</span>
+      <p class="manifesto__lead" data-split="words">
+        Мы не просто готовим. Мы собираем <em class="gold">эмоции</em> —
+        восток и Европа в одной тарелке, тишина зала и огонь плиты,
+        <em class="gold">своя история</em> в каждой подаче. Только сезонные
+        продукты от проверенных фермеров. Никакого хаоса — только <em class="gold">вкус</em>.
+      </p>
+
+      <div class="manifesto__meta" data-reveal>
+        <div class="manifesto__stat">
+          <b data-count="9">0</b>
+          <span>подач в сете</span>
+        </div>
+        <div class="manifesto__stat">
+          <b data-count="340">0</b>
+          <span>позиций в винной карте</span>
+        </div>
+        <div class="manifesto__stat">
+          <b data-count="2016">0</b>
+          <span>год основания</span>
+        </div>
+      </div>
+    </div>
+
+    <figure class="manifesto__figure" data-parallax-scope>
+      <div class="manifesto__clip" data-reveal-clip>
+        <div class="manifesto__img" data-parallax data-speed="0.14">
+          <img src="https://images.unsplash.com/photo-1600891964599-f61ba0e24092?auto=format&fit=crop&w=1200&q=80"
+               alt="Шеф-повар подаёт фирменное блюдо" loading="lazy" decoding="async">
+        </div>
+      </div>
+      <figcaption>
+        <span>Шеф-повар Артём Рахин</span>
+        <span>Авторское меню</span>
+      </figcaption>
+    </figure>
+
+  </div>
+</section>
+
+<section class="menu" id="menu">
+  <div class="menu__head">
+    <span class="eyebrow" data-reveal>03 / Меню</span>
+    <h2 class="h2" data-reveal>Сет-меню</h2>
+    <p class="menu__intro" data-reveal>
+      Три траектории вкуса. Выберите свою — или позвольте шефу решить.
+      Подачи выходят последовательно, каждая рассчитана на 90&nbsp;секунд.
+    </p>
+  </div>
+
+  <div class="menu__list">
+
+    <div class="menu__panel">
+      <div class="menu__panel-head">
+        <span class="menu__num">01</span>
+        <div>
+          <h3 class="menu__panel-title">Закуски</h3>
+          <p class="menu__panel-sub">Начало траектории · 3 блюда</p>
+        </div>
+      </div>
+      <div class="menu__cards">
+        <article class="dish" data-cursor="view">
+          <div class="dish__media"><img loading="lazy" decoding="async" alt="Буррата с инжиром и гречишным мёдом" src="https://images.unsplash.com/photo-1540189549336-e6e99c3679fe?auto=format&fit=crop&w=900&q=80"></div>
+          <div class="dish__body">
+            <h4>Буррата с инжиром</h4>
+            <p>Гречишный мёд, бальзамический крем, хрустящий миндаль</p>
+            <span class="dish__price">1 650 ₽</span>
+          </div>
+        </article>
+        <article class="dish" data-cursor="view">
+          <div class="dish__media"><img loading="lazy" decoding="async" alt="Тартар из тунца Bluefin с юдзу" src="https://images.unsplash.com/photo-1504674900247-0877df9cc836?auto=format&fit=crop&w=900&q=80"></div>
+          <div class="dish__body">
+            <h4>Тартар из тунца Bluefin</h4>
+            <p>Юдзу, икра тобико, чили и кунжутное тесто</p>
+            <span class="dish__price">3 400 ₽</span>
+          </div>
+        </article>
+        <article class="dish" data-cursor="view">
+          <div class="dish__media"><img loading="lazy" decoding="async" alt="Хамон де Беллота с муссом из трюфеля" src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&w=900&q=80"></div>
+          <div class="dish__body">
+            <h4>Хамон де Беллота</h4>
+            <p>Мусс из белого трюфеля, сабайон, микрозелень</p>
+            <span class="dish__price">2 800 ₽</span>
+          </div>
+        </article>
+      </div>
+    </div>
+
+    <div class="menu__panel">
+      <div class="menu__panel-head">
+        <span class="menu__num">02</span>
+        <div>
+          <h3 class="menu__panel-title">Основные</h3>
+          <p class="menu__panel-sub">Сердце сета · 3 блюда</p>
+        </div>
+      </div>
+      <div class="menu__cards">
+        <article class="dish" data-cursor="view">
+          <div class="dish__media"><img loading="lazy" decoding="async" alt="Лосось конфи с мисо-глазурью" src="https://images.unsplash.com/photo-1467003909585-2f8a72700288?auto=format&fit=crop&w=900&q=80"></div>
+          <div class="dish__body">
+            <h4>Лосось конфи</h4>
+            <p>Мисо-глазурь, дайкон, цитрусовая цедра</p>
+            <span class="dish__price">3 900 ₽</span>
+          </div>
+        </article>
+        <article class="dish" data-cursor="view">
+          <div class="dish__media"><img loading="lazy" decoding="async" alt="Говядина Вагю A5 на камне" src="https://images.unsplash.com/photo-1544025162-d76694265947?auto=format&fit=crop&w=900&q=80"></div>
+          <div class="dish__body">
+            <h4>Говядина Вагю A5</h4>
+            <p>На камне, соус понзу, печёный чеснок, кимчи</p>
+            <span class="dish__price">7 800 ₽</span>
+          </div>
+        </article>
+        <article class="dish" data-cursor="view">
+          <div class="dish__media"><img loading="lazy" decoding="async" alt="Утка магре с соусом из чёрной смородины" src="https://images.unsplash.com/photo-1476224203421-9ac39bcb3327?auto=format&fit=crop&w=900&q=80"></div>
+          <div class="dish__body">
+            <h4>Утка магре</h4>
+            <p>Соус из чёрной смородины, белая фасоль, трюфель</p>
+            <span class="dish__price">3 200 ₽</span>
+          </div>
+        </article>
+      </div>
+    </div>
+
+    <div class="menu__panel">
+      <div class="menu__panel-head">
+        <span class="menu__num">03</span>
+        <div>
+          <h3 class="menu__panel-title">Десерты</h3>
+          <p class="menu__panel-sub">Финал траектории · 3 блюда</p>
+        </div>
+      </div>
+      <div class="menu__cards">
+        <article class="dish" data-cursor="view">
+          <div class="dish__media"><img loading="lazy" decoding="async" alt="Шоколадный фондан с матча-мороженым" src="https://images.unsplash.com/photo-1587314168485-3236d6710814?auto=format&fit=crop&w=900&q=80"></div>
+          <div class="dish__body">
+            <h4>Шоколадный фондан</h4>
+            <p>Матча-мороженое, солёная карамель, ваниль бурбон</p>
+            <span class="dish__price">1 150 ₽</span>
+          </div>
+        </article>
+        <article class="dish" data-cursor="view">
+          <div class="dish__media"><img loading="lazy" decoding="async" alt="Павлова с манго и маракуйей" src="https://images.unsplash.com/photo-1488477181946-6428a0291777?auto=format&fit=crop&w=900&q=80"></div>
+          <div class="dish__body">
+            <h4>Павлова с манго</h4>
+            <p>Маракуйя, розмарин, воздушный крем</p>
+            <span class="dish__price">950 ₽</span>
+          </div>
+        </article>
+        <article class="dish" data-cursor="view">
+          <div class="dish__media"><img loading="lazy" decoding="async" alt="Крем-брюле с ванилью таитянской" src="https://images.unsplash.com/photo-1424847651672-bf20a4b0982b?auto=format&fit=crop&w=900&q=80"></div>
+          <div class="dish__body">
+            <h4>Крем-брюле</h4>
+            <p>Ваниль таитянская, солёный шоколад, тимьян</p>
+            <span class="dish__price">850 ₽</span>
+          </div>
+        </article>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<section class="gallery" id="gallery">
+  <div class="gallery__head">
+    <span class="eyebrow" data-reveal>04 / Атмосфера</span>
+    <h2 class="h2" data-reveal>Внутри NAMASTE</h2>
+  </div>
+
+  <div class="gallery__grid">
+    <figure class="g-item g-item--1" data-reveal-clip>
+      <div class="g-item__wrap">
+        <img loading="lazy" decoding="async" alt="Главный зал с мягким светом" src="https://images.unsplash.com/photo-1552566626-52f8b828add9?auto=format&fit=crop&w=1000&q=80">
+      </div>
+      <figcaption>Главный зал</figcaption>
+    </figure>
+
+    <figure class="g-item g-item--2" data-reveal-clip>
+      <div class="g-item__wrap">
+        <img loading="lazy" decoding="async" alt="Сервировка стола крупным планом" src="https://images.unsplash.com/photo-1555396273-367ea4eb4db5?auto=format&fit=crop&w=900&q=80">
+      </div>
+      <figcaption>Сервировка</figcaption>
+    </figure>
+
+    <figure class="g-item g-item--3" data-reveal-clip>
+      <div class="g-item__wrap">
+        <img loading="lazy" decoding="async" alt="Барная стойка с подсветкой" src="https://images.unsplash.com/photo-1559339352-11d035aa65de?auto=format&fit=crop&w=1000&q=80">
+      </div>
+      <figcaption>Бар</figcaption>
+    </figure>
+
+    <figure class="g-item g-item--4" data-reveal-clip>
+      <div class="g-item__wrap">
+        <img loading="lazy" decoding="async" alt="Уютные столики у окна" src="https://images.unsplash.com/photo-1521017432531-fbd92d768814?auto=format&fit=crop&w=900&q=80">
+      </div>
+      <figcaption>Столы у окна</figcaption>
+    </figure>
+
+    <figure class="g-item g-item--5" data-reveal-clip>
+      <div class="g-item__wrap">
+        <img loading="lazy" decoding="async" alt="Открытая кухня ресторана" src="https://images.unsplash.com/photo-1560624052-449f5ddf0c31?auto=format&fit=crop&w=1000&q=80">
+      </div>
+      <figcaption>Открытая кухня</figcaption>
+    </figure>
+
+    <figure class="g-item g-item--6" data-reveal-clip>
+      <div class="g-item__wrap">
+        <img loading="lazy" decoding="async" alt="Финальная подача десерта" src="https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?auto=format&fit=crop&w=900&q=80">
+      </div>
+      <figcaption>Десерт</figcaption>
+    </figure>
+  </div>
+</section>
+
+<section class="reviews" id="reviews">
+  <div class="reviews__head">
+    <span class="eyebrow" data-reveal>05 / Отзывы</span>
+    <h2 class="h2" data-reveal>Говорят гости</h2>
+  </div>
+
+  <div class="reviews__viewport" id="reviewsViewport">
+    <div class="review is-active">
+      <div class="review__stars" aria-label="5 из 5">★★★★★</div>
+      <blockquote>«Это не ужин — это спектакль. Каждое блюдо маленькое
+        произведение искусства, а сервис настолько незаметный, что мешает
+        только тогда, когда ты забываешь сказать спасибо».</blockquote>
+      <footer><b>Анна Михеева</b><span>гастрокритик, «Гид по Москве»</span></footer>
+    </div>
+
+    <div class="review">
+      <div class="review__stars" aria-label="5 из 5">★★★★★</div>
+      <blockquote>«Сет из девяти подач — два с половиной часа чистого
+        удовольствия. Лосось на мисо и фондан с матча обсуждали до утра».</blockquote>
+      <footer><b>Дмитрий Савельев</b><span>постоянный гость, 40 визитов</span></footer>
+    </div>
+
+    <div class="review">
+      <div class="review__stars" aria-label="5 из 5">★★★★★</div>
+      <blockquote>«Место, куда хочется возвращаться. Свет, музыка, расстояние
+        между столами — всё выверено до миллиметра».</blockquote>
+      <footer><b>Елена Вронская</b><span>архитектор</span></footer>
+    </div>
+
+    <div class="review">
+      <div class="review__stars" aria-label="5 из 5">★★★★★</div>
+      <blockquote>«Вагю на камне — отдельный вид искусства. Идеальная винная
+        подборка: сомелье оказался лучше меня в выборе».</blockquote>
+      <footer><b>Игорь Ланской</b><span>шеф-сомелье, Vinum</span></footer>
+    </div>
+  </div>
+
+  <div class="reviews__controls">
+    <button class="reviews__btn" id="reviewPrev" aria-label="Предыдущий отзыв">←</button>
+    <div class="reviews__dots" id="reviewDots"></div>
+    <button class="reviews__btn" id="reviewNext" aria-label="Следующий отзыв">→</button>
+  </div>
+</section>
+
+<section class="reserve" id="reserve">
+  <div class="reserve__bg" data-parallax data-speed="0.08">
+    <img loading="lazy" decoding="async" alt="" src="https://images.unsplash.com/photo-1414235077428-338989a2e8c0?auto=format&fit=crop&w=1600&q=80">
+  </div>
+  <div class="reserve__scrim"></div>
+  <div class="reserve__glow" data-parallax data-speed="0.14"></div>
+
+  <div class="reserve__inner">
+    <div class="reserve__copy">
+      <span class="eyebrow" data-reveal>06 / Бронирование</span>
+      <h2 class="h2" data-reveal>Ваш вечер<br>начнётся здесь</h2>
+      <p data-reveal>
+        Стол у окна, камерный зал или вся лаунжа приватно — напишите,
+        и мы подберём лучшее место и время. Бронь держим 20 минут.
+      </p>
+      <div class="reserve__contacts" data-reveal>
+        <a href="tel:+79999999999" class="link-underline">+7 999 999 99 99</a>
+        <a href="mailto:test@test.com" class="link-underline">test@test.com</a>
+      </div>
+    </div>
+
+    <form class="reserve__form" id="reserveForm" novalidate data-reveal>
+      <div class="field">
+        <input type="text" id="f-name" name="name" placeholder=" " required autocomplete="name">
+        <label for="f-name">Ваше имя</label>
+      </div>
+
+      <div class="field">
+        <input type="tel" id="f-phone" name="phone" placeholder=" " required autocomplete="tel">
+        <label for="f-phone">Телефон</label>
+      </div>
+
+      <div class="field-row">
+        <div class="field">
+          <input type="date" id="f-date" name="date" placeholder=" " required>
+          <label for="f-date">Дата</label>
+        </div>
+        <div class="field">
+          <input type="time" id="f-time" name="time" placeholder=" " required value="19:30">
+          <label for="f-time">Время</label>
+        </div>
+      </div>
+
+      <div class="field">
+        <select id="f-guests" name="guests" required>
+          <option value="" disabled></option>
+          <option value="1">1 гость</option>
+          <option value="2" selected>2 гостя</option>
+          <option value="3">3 гостя</option>
+          <option value="4">4 гостя</option>
+          <option value="5">5 гостей</option>
+          <option value="6">6 гостей</option>
+          <option value="7">7 гостей</option>
+          <option value="8+">8 и более — лаунжа</option>
+        </select>
+        <label for="f-guests">Гостей</label>
+        <span class="field__chevron">▾</span>
+      </div>
+
+      <button type="submit" class="btn btn--glow btn--full btn--lg" id="reserveSubmit" data-cursor="send">
+        <span>Забронировать</span>
+      </button>
+
+      <p class="reserve__note">Нажимая кнопку, вы соглашаетесь с политикой бронирования.</p>
+
+      <div class="reserve__success" id="reserveSuccess" aria-live="polite">
+        <b>Готово</b>
+        <span>Мы перезвоним в течение 15 минут и подтвердим стол.</span>
+      </div>
+    </form>
+  </div>
+</section>
+
+</main>
+
+<footer class="footer">
+  <div class="footer__watermark" aria-hidden="true" data-parallax data-speed="0.06">NAMASTE</div>
+
+  <div class="footer__inner">
+    <div class="footer__col">
+      <span class="footer__label">Адрес</span>
+      <p>Москва, ул. Патриаршие Пруды, 12<br>Вход с Козихинского переулка</p>
+    </div>
+
+    <div class="footer__col">
+      <span class="footer__label">Часы</span>
+      <p>Вт–Чт · 18:00 — 00:00<br>Пт–Сб · 18:00 — 02:00<br>Вс · 18:00 — 00:00</p>
+    </div>
+
+    <div class="footer__col">
+      <span class="footer__label">Связь</span>
+      <a href="tel:+79999999999" class="link-underline">+7 999 999 99 99</a>
+      <a href="mailto:test@test.com" class="link-underline">test@test.com</a>
+    </div>
+
+    <div class="footer__col">
+      <span class="footer__label">Соцсети</span>
+      <a href="#" class="link-underline">Instagram</a>
+      <a href="#" class="link-underline">Telegram</a>
+      <a href="#" class="link-underline">VK</a>
+    </div>
+  </div>
+
+  <div class="footer__bottom">
+    <span>© 2026 NAMASTE. Все права защищены.</span>
+    <span>Сделано с вниманием к деталям</span>
+    <a href="#hero" class="link-underline" data-scroll>Наверх ↑</a>
+  </div>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/lenis@1.1.14/dist/lenis.min.js"></script>
+<script src="script.js" defer></script>
+
+</body>
+</html>
